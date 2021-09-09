@@ -21,6 +21,7 @@ function msgMaker (name) {
     let i3 = Math.floor(Math.random() * 5);
 
     //console.log(i);
+    console.log(i1, i2, i3);
     msg = arr1[i1] + ' ' + arr2[i2] + ' ' + arr3[i3] + '!'; // changed later
     console.log(name + '! ' + msg);
 }; 
@@ -28,7 +29,6 @@ function msgMaker (name) {
 // receive user name
 let user = 'ABC';
 msgMaker(user);
-console.log(i);
 
 
 
