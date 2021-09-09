@@ -8,11 +8,49 @@
 */
 
 // what types of messages to output?
-// 3 arr of dif type of word: S + V + adj: 
-let arr1 = ['the Sun', 'the moon', 'the earth', 'anything', 'nothing'];
-let arr2 = ['is', 'will be', 'was', 'be', 'shall be'];
-let arr3 = ['beautiful', 'great', 'perfet', 'nice', 'yellow'];
+// create a obj
+const obj = {  
+arr1: ['the Sun is shining', 'the moon is shining', 'the earth is turn around', 'anything is nothing', 'nothing is anything'],
+arr2: ['Why is Sunday?', 'why Monday?', 'today is anyday', 'Friday is nothing', 'someday is nothing'],
+arr3: ['beautiful is argly', 'great is nothing', 'perfet is imperfect', 'nice is bad', 'yellow is blue']
+};
 
+// func create an random number
+function ranNo (num) {
+    return Math.floor(Math.random() * num);
+} 
+
+// arr to store msg
+let msgArr = [];
+
+// push msg to arr
+for (let key in obj) {
+    let idx = obj[key].length;
+    switch(key) {
+        case 'arr1':
+            msgArr.push(obj[key][ranNo(idx)]);
+            break;
+        case 'arr2':
+            msgArr.push(obj[key][ranNo(idx)]);
+            break;
+        case 'arr3':
+            msgArr.push(obj[key][ranNo(idx)]);
+            break;
+        default:
+            msgArr.push('Not enough inf');
+    }
+}
+
+// func cread msg
+const msgMaker = () => {
+    let msg = msgArr.join('\n');
+    console.log(msg);
+};
+msgMaker();
+
+
+
+/*
 // an func use random to reate msg from 3 arrs
 function msgMaker (name) {
     let msg = ' ';
@@ -25,10 +63,11 @@ function msgMaker (name) {
     msg = arr1[i1] + ' ' + arr2[i2] + ' ' + arr3[i3] + '!'; // changed later
     console.log(name + '! ' + msg);
 }; 
+*/
 
-// receive user name
+/* receive user name
 let user = 'ABC';
 msgMaker(user);
-
+*/
 
 
