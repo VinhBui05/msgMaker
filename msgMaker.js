@@ -48,7 +48,7 @@ const msgMaker = () => {
     console.log(msg);
 };
 msgMaker();
-
+console.log('how to push to githup');
 
 
 /*
